@@ -1,0 +1,394 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: #eeeeee;
+	color: #000;
+	text-align: center;
+	font-family: Helvetica;
+}
+
+#menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 5%;
+	width: 90%;
+	background: #434343;
+	z-index: 2;
+}
+
+#search {
+	width: 100%;
+	height: 60px;
+	padding-top: 1px;
+	position: fixed;
+	top: 0px;
+	background: #ffffff; //
+	border-bottom-style: solid; //
+	border-bottom-width: 1px; //
+	border-bottom-color: #eeeeee;
+	z-index: 2;
+}
+
+#alerts {
+	display:block;
+	position: relative;
+	width: 100%;
+	margin-top: 60px;
+	overflow: hidden;
+}
+.divsuper
+{
+	display: block;
+	position: absolute;
+	float: left;
+	top: 0px;
+	left: -160px;
+	overflow: hidden;
+	z-index: 1;
+}
+.leftdrag {
+	float: left;
+	display: block;
+	padding-top: 33px;
+	width: 160px;
+}
+
+.rightdrag {
+	float: right;
+	display: block;
+	padding-top: 33px;
+	width: 160px;
+}
+
+.separator {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 1px;
+	background: #ffffff;
+}
+
+.menutable {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+#bg {
+	display: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	z-index: 2;
+}
+
+.menuicon,.icon,.alerticon {
+	width: 20px;
+	margin: 20px;
+	display: block;
+	float: left;
+}
+
+.iconbutton {
+	margin-top: 10px;
+	width: 20px;
+	weight: 20px;
+	display: block;
+	float: right;
+}
+
+.iconnav,.iconnavmenu {
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.iconnavmenu {
+	float: right;
+}
+
+.alerticon {
+	width: 30px;
+	height: 15px;
+	margin: 0;
+	margin-right: 10px;
+	padding: 0;
+}
+
+#shadow {
+	position: fixed;
+	top: 60px;
+	height: 8px;
+	width: 100%;
+	background-image: url(pictures/shadow.png);
+	opacity: 0.1;
+	display: none;
+	z-index: 1;
+}
+
+.inputfield {
+	display: block;
+	float: left;
+	border: none;
+	text-align: left;
+	padding: 0;
+	height: 40px;
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font: Verdana;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font: Verdana;
+	font-color: #434343;
+}
+
+
+.high,.medium,.low,.done,.endline {
+	float: left;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font: Verdana;
+	color: #ffffff;
+	text-align: left;
+}
+
+.high {
+	background: #e63900;
+	background: -webkit-gradient(linear, left top, left bottom, from(#de3700),
+		to(#e63900) );
+}
+
+.medium {
+	background: #e67300;
+	background: -webkit-gradient(linear, left top, left bottom, from(#de6f00),
+		to(#e67300) );
+}
+
+.low {
+	background: #e6a100;
+	background: -webkit-gradient(linear, left top, left bottom, from(#de9b00),
+		to(#e6a100) );
+}
+
+.done { //
+	border-top-color: #eeeeee; //
+	border-top-color: #505050;
+	background: #eeeeee;
+	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee),
+		to(#e8e8e8) );
+	color: #808080;
+}
+
+.highlighthigh,.highlightmedium,.highlightlow,.highlightdone,.highlightdetail
+	{
+	display: inline-block;
+	font-size: 14px;
+	font: Verdana;
+	font-weight: bolder;
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 12px;
+	padding-left: 7px;
+	padding-right: 7px;
+	background-color: #ffffff;
+}
+
+.highlighthigh {
+	color: #e63900;
+}
+
+.highlightmedium {
+	color: #e67300;
+}
+
+.highlightlow {
+	color: #e6a100;
+}
+
+.highlightdone {
+	color: #eae7e4;
+	background-color: #434343;
+	color: #eeeeee;
+	background-color: #999999;
+}
+
+.highlightdetail {
+	color: #434343;
+}
+
+.dates {
+	float: right;
+}
+
+h1,h2,h3 {
+	font-size: 18px;
+	font: Verdana;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+h1 {
+	color: #ffffff;
+}
+
+table,tr,td {
+	margin: 20px;
+	margin-top: 28px;
+	margin-bottom: 28px;
+	padding: 0;
+	border-width: 0px;
+	border-style: solid;
+	border-spacing: 0;
+}
+
+#info {
+	float: left;
+	width: 100%;
+	height: 1000px;
+	background-color: #444444;
+	display: none;
+	color: white;
+}
+
+
+.login {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.loginfield {
+	display: block;
+	float: left;
+	border: none;
+	text-align: left;
+	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #CCCCCC;
+	width: 90%;
+	height: 40px;
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font: Verdana;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+.touchBox {
+	float: left;
+	display: block;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	z-index: 3;
+	background-color: #434343;
+	overflow: hidden;
+}
+
+.contentBox {
+	padding: 0;
+	float: left;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	background-color: #505050;
+}
+
+.navigation,.navigation_blue_dark,.navigation_blue_medium,.navigation_blue_light,.navigation_green_dark,.navigation_green_medium,.navigation_green_light,.filter
+	{
+	padding: 0;
+	display: block;
+	width: 100%;
+	height: 61px;
+	vertical-align: middle;
+	background-color: #434343;
+}
+
+.navigation_blue_dark {
+	background-color: #008dae;
+}
+
+.navigation_blue_medium {
+	background-color: #54a7c1;
+}
+
+.navigation_blue_light {
+	background-color: #94c3d5;
+}
+
+.navigation_green_dark {
+	background-color: #bcae83;
+}
+
+.navigation_green_medium {
+	background-color: #cbc1a2;
+}
+
+.navigation_green_light {
+	background-color: #ddd4c0;
+}
+
+.filter {
+	background-color: #fff;
+	border-bottom-color: #eeeeee;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	position: fixed;
+	top: 61px;
+	z-index: 1;
+}
+
+h3 {
+	color: #fff;
+	margin-top: 20px;
+}
+
+#touchwindow {
+	overflow: hidden;
+	position: relative;
+	background-color: #000;
+	margin: 0 auto;
+}
+
+#Container {
+	margin: 0;
+	padding: 0;
+	-webkit-transition: -webkit-transform 0.6s
+		cubic-bezier(0.25, 0.1, 0.25, 1);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	display: block;
+	transform: translate3d(0, 0, 0);
+}

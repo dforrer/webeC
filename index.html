@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Mobile Todo App</title>
+
+<meta name="description" content="Prototype">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="keywords" content="Vortrag, Präsentation">
+<meta http-equiv="cache-control" content="no-cache">
+<!-- tells browser not to cache -->
+<meta http-equiv="expires" content="0">
+<!-- says that the cache expires 'now' -->
+<meta http-equiv="pragma" content="no-cache">
+<!-- says not to use cached stuff, if there is any -->
+<script type="text/javascript" src="javascript.js" charset="utf-8"></script>
+
+<!-- FORRER: Fade out URL-Bar-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- FORRER: Diable ios-Zoom -->
+<meta name="viewport" content="user-scalable=0, initial-scale=1.0" />
+<!-- iPhone 5 (Retina) -->
+<link href="img/icons/apple-touch-startup-image-640x920.png"
+				media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+				rel="apple-touch-startup-image">
+<!-- iPhone 5 -->
+<link href="img/icons/apple-touch-startup-image-640x1096.png"
+				media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+				rel="apple-touch-startup-image">
+
+<link media="screen" rel="stylesheet" type="text/css" href="browser.css" />
+
+</head>
+
+
+<body>
+
+<div id='search'><img id='searchbutton' class='iconnav'
+				src='pictures/searchicon.png' /> <input id='suche'
+				placeholder='Suchbegriff eingeben..' class='inputfield' name="Suchen..."
+				type="text" /> <img id='menubutton' class='iconnavmenu'
+				src='pictures/add_icon_dark_high.png?v=1' /></div>
+<div id='alerts'></div>
+<div id='info'></div>
+<div id='bg'></div>
+<div id='slidewindow'></div>
+
+<script type='text/javascript'>
+	init();
+</script>
+</body>
+</html>
