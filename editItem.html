@@ -14,47 +14,42 @@
 </head>
 <body>
 
-<table>
-				<tr>
-								<td style='width: 1%'><img class='alerticon'
-												src='pictures/chemie_white.png' /></td>
-								<td style='width: 98%'>
-								<h1>Chemie (Hoch)</h1>
-								</td>
-								<td style='width: 1%'>
-								<p class='dates' style='color: #ffffff'>08.04.13</p>
-								</td>
-				</tr>
-				<tr>
-								<td style='height: 10px'></td>
-				</tr>
-				<tr>
-								<td></td>
-								<td style='vertical-align: top; text-align: left;'>
-								<p style='color: #ffffff;'><i>Becken 3</i> - Die Phosphatwerte sind
-								erhöht.</p>
-								</td>
-								<td style='vertical-align: top'>
-								<p class='dates' style='color: #ffffff'><b>22.39</b></p>
-								</td>
-				</tr>
-</table>
-<!--<img src='pictures/detail_tabelle.png?v=1' style='margin-left: 22px;margin-top:20px;width: 110%;' />-->
-<div style='width: 100%; position: absolute; bottom: 0;'><a href='#'
-				onClick='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'
-				onTouchEnd='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
-<div class='navigation_green_dark'><img src='pictures/quittieren_high.png'
-				class='iconnav' />
-<h3>Alarm quittieren</h3>
+<p style='color: #ffffff;'>Priorität auswählen:</p>
+<select id="prio_new" style="font-size: 13px;width: 300px; height: 30px">
+	<option value="3">High</option>
+	<option value="2">Medium</option>
+  	<option value="1">Low</option>
+</select>
+
+<br/>
+
+<p style='color: #ffffff;'>Titel eingeben:</p>
+<input id="title_new" type="text" maxlength="20" style="font-size: 13px;width: 300px; height: 30px"/>
+
+<br/>
+
+<p style='color: #ffffff;'>Beschreibung eingeben:</p>
+<input id="description_new" type="text" style="font-size: 13px;width: 300px; height: 30px"/>
+
+<br/>
+
+<p style='color: #ffffff;'>Tags eingeben (mit Leerzeichen getrennt):</p>
+<input id="tags_new" type="text" style="font-size: 13px;width: 300px; height: 30px"/>
+
+
+<div style='width: 100%; position: absolute; bottom: 0;'>
+	<a href='#' onClick='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
+		<div class='navigation_blue_dark'>
+			<img src='pictures/quittieren_high.png' class='iconnav' />
+			<h3>abbrechen</h3>
+		</div>
+	</a>
+	<a href='#' onClick='addNewItem();setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
+		<div class='navigation_blue_medium'><img src='pictures/erledigen_high.png' class='iconnav' />
+			<h3>speichern</h3>
+		</div>
+	</a>
 </div>
-</a> <a href='#'
-				onClick='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'
-				onTouchEnd='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
-<div class='navigation_green_medium'><img src='pictures/erledigen_high.png'
-				class='iconnav' />
-<h3>Problem wurde gelöst</h3>
-</div>
-</a></div>
 
 </body>
 </html>

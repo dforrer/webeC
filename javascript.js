@@ -336,13 +336,12 @@ function slider(id) {
 }
 
 // This is a draggable Alert-Object
-function Container(id, title, icon, text, ackBool, highlightedtext, date, time, instructionsYESNO, instructionsLINK, state, alertlevel, detailLINK) {
+function Container(id, title, icon, text, highlightedtext, date, time, instructionsYESNO, instructionsLINK, state, alertlevel, detailLINK) {
 	// Object Variables (can't have "this.")
 	var id = id;
 	var title = title;
 	var icon = icon;
 	var text = text;
-	var ackBool = ackBool;
 	var highlightedtext = highlightedtext;
 	var date = date;
 	var time = time;
@@ -453,13 +452,16 @@ function Container(id, title, icon, text, ackBool, highlightedtext, date, time, 
 		table += "<tr>";
 		table += "<td></td>";
 		table += "<td style='vertical-align: top' id='text" + id + "'>";
-		if (ackBool == true && state == 'undone') {
+
+		if (highlightedtext != null && state == 'undone') {
 			table += "<div class='highlight" + alertlevel + "'>";
-			table += highlightedtext;
+			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
+			table += highlightedtext_with_commas;
 			table += "</div>";
-		} else if (ackBool == true && state == 'done') {
+		} else if (highlightedtext != null && state == 'done') {
 			table += "<div class='highlightdone'>";
-			table += highlightedtext;
+			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
+			table += highlightedtext_with_commas;
 			table += "</div>";
 		}
 		table += text;
@@ -579,12 +581,10 @@ function Container(id, title, icon, text, ackBool, highlightedtext, date, time, 
 					content.setAttribute('class', alertlevel);
 				}
 			} else if (distanceX < -160) {
-
-				if (ackBool == false) {
-					ackBool = true;
-				} else {
-					ackBool = false;
-				}
+				
+				// TODO: Delete item
+				
+				
 			}
 		}
 		update();
@@ -624,10 +624,20 @@ function addSlider(link) {
 }
 
 
-
 function getToken()
 {
 
+}
+
+
+
+function addNewItem()
+{
+	var prio_new = document.getElementById("prio_new").value;
+	var title_new = document.getElementById("title_new").value;
+	var description_new = document.getElementById("description_new").value;
+	
+	alert(title_new);
 }
 
 
@@ -643,6 +653,8 @@ function checkCookie()
     }
     else
     {
+	    return;
+	    
       	secret = prompt("Enter your secret:", "");
         if (secret != "" && secret != null) 
         {
@@ -695,10 +707,24 @@ function getCookie(cname)
     return "";
 }
 
+function handleCommand (cmd)
+{
+	var cmdArray = cmd.split(" ");
+	switch(cmdArray[0])
+	{
+		case "Login":
+			alert("Login command: " + cmdArray.length);
+			break;
+		case "Logout":
+			alert("Logout");
+			break;
+		default:
+			alert("Unknown command");
+	}	
+}
 
-
-function init() {
-
+function init() 
+{
 	isTouchSupported = 'ontouchstart' in window;
 	startEvent = isTouchSupported ? 'touchstart' : 'mousedown';
 	moveEvent = isTouchSupported ? 'touchmove' : 'mousemove';
@@ -711,19 +737,35 @@ function init() {
 	//-------------
 	checkCookie();
 
+	// Register ID "topinput" for ENTER keys
+	//---------------------------------------
+	var topinput = document.getElementById('topinput');
+	topinput.onkeypress = function(e)
+	{
+	    if (!e) e = window.event;
+    	var keyCode = e.keyCode || e.which;
+    	if (keyCode == '13')
+    	{
+      		// Enter pressed
+			handleCommand(topinput.value);
+      		return false;
+    	}
+  	}
+
+
 
 	// Elemente initialisieren
-	var item1 = new Container(1, 'Einkaufen', 'high', '<p><i>Biologie</i> - Fällmittelpumpe 3 ist ausgefallen.</p>', false, 'quittiert durch M. Muster', '12.05.13', '19:56', false, null, 'undone', 'high', 'detail1.html');
+	var item1 = new Container(1, 'Einkaufen Heute', 'high', '<p><i>Biologie</i> - Fällmittelpumpe 3 ist ausgefallen. Hier steht mal etwas richtig langes! Ein halber Roman steht hier.</p>', 'Einkaufen Geschenke', '12.05.13', '19:56', false, null, 'undone', 'high', 'detail1.html');
 
-	var item2 = new Container(2, 'Chemie', 'medium', '<p><i>Becken 3</i> - Die Phosphatwerte sind erhöht.</p>', false, 'quittiert durch M. Muster', '08.04.13', '22:39', false, null, 'undone', 'medium', 'detail1.html');
+	var item2 = new Container(2, 'webeC lernen', 'medium', '<p>Ich muss noch webeC lernen.</p>', 'Todo FHNW', '08.04.13', '22:39', false, null, 'undone', 'medium', 'detail1.html');
 
-	var item3 = new Container(3, 'Grobrechen', 'high', '<p><i>Grobrechen 1</i> - Der Grobrechen ist blockiert.</p>', false, 'quittiert durch M. Muster', '10.05.13', '10:15', true, 'rechen_anleitungen.html', 'undone', 'high', 'detail1.html');
+	var item3 = new Container(3, 'Grobrechen', 'high', '<p><i>Grobrechen 1</i> - Der Grobrechen ist blockiert.</p>', null, '10.05.13', '10:15', true, 'rechen_anleitungen.html', 'undone', 'high', 'detail1.html');
 
-	var item4 = new Container(4, 'Frischschlamm', 'medium', '<p><i>Frischschlammbecken</i> - Füllstand: <b>20.2 m<sup>3</sup>', false, 'quittiert durch M. Muster', '07.05.13', '6:45', false, null, 'undone', 'medium', 'detail1.html');
+	var item4 = new Container(4, 'Frischschlamm', 'medium', '<p><i>Frischschlammbecken</i> - Füllstand: <b>20.2 m<sup>3</sup>', 'quittiert durch M. Muster', '07.05.13', '6:45', false, null, 'undone', 'medium', 'detail1.html');
 
-	var item5 = new Container(5, 'Feinrechen', 'low', '<p><i>Gebäude 2</i> - Der Feinrechen ist blockiert.</p>', false, 'quittiert durch M. Muster', '30.04.13', '12:45', true, 'rechen_anleitungen.html', 'undone', 'low', 'detail1.html');
+	var item5 = new Container(5, 'Feinrechen', 'low', '<p><i>Gebäude 2</i> - Der Feinrechen ist blockiert.</p>', 'quittiert durch M. Muster', '30.04.13', '12:45', true, 'rechen_anleitungen.html', 'undone', 'low', 'detail1.html');
 
-	var item6 = new Container(6, 'Gasdepot', 'high', '<p><i>Gasdepot 1</i> - Das Depot ist zu 80% voll.</p>', false, 'quittiert durch M. Muster', '05.04.13', '12:20', false, null, 'undone', 'high', 'detail1.html');
+	var item6 = new Container(6, 'Gasdepot', 'high', '<p><i>Gasdepot 1</i> - Das Depot ist zu 80% voll.</p>', 'quittiert durch M. Muster', '05.04.13', '12:20', false, null, 'undone', 'high', 'detail1.html');
 
 	// Adding Items to the array
 
@@ -733,16 +775,15 @@ function init() {
 	items[3] = item4;
 	items[4] = item5;
 	items[5] = item6;
+	
 
 	// FORRER: Add Listener for Orientation change
 	window.addEventListener('orientationchange', function() {
 
-		item1.update();
-		item2.update();
-		item3.update();
-		item4.update();
-		item5.update();
-		item6.update();
+		for ( i = 0; i < items.length; i++) 
+		{
+			items[i].update();
+		}
 
 		document.getElementById('alerts').style.width = window.innerWidth + 'px';
 		// Adjust margin of the menu to the top
@@ -758,26 +799,29 @@ function init() {
 
 	// Focus on searchfield
 	document.getElementById("searchbutton").onclick = function() {
-		document.getElementById("suche").focus();
+		document.getElementById("topinput").focus();
 	};
 
 	// Fix for moving searchbar when virtual keyboard is shown
-	document.getElementById('suche').onfocus = function() {
+	document.getElementById('topinput').onfocus = function() {
 		document.getElementById('search').style.position = 'absolute';
 		// scroll the window up to hide the address bar of the browser.
 		window.setTimeout(function() {
 			window.scrollTo(0, 0);
 		}, 0);
 	}
-	document.getElementById('suche').onblur = function() {
+	document.getElementById('topinput').onblur = function() {
 		document.getElementById('search').style.position = 'fixed';
 	}
+	
 	// Setup für Slider-Window
 
 	// Show menu
 	document.getElementById('menubutton').addEventListener(endEvent, function() {
 		// ?v=1 sorgt dafür dass die Seite neu geladen wird
-		addSlider('editItem.html?v=1');
+		var timestamp = new Date();  
+		var link = 'editItem.html?timestamp=' + timestamp.getTime();
+		addSlider(link);
 	});
 	
 	
