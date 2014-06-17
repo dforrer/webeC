@@ -653,14 +653,16 @@ function checkCookie()
     }
     else
     {
-	    return;
-	    
-      	secret = prompt("Enter your secret:", "");
+
+		return;
+		//TODO: Add non-draggable slider
+
         if (secret != "" && secret != null) 
         {
 			// AJAX-Request to getToken
 			var xhr = new XMLHttpRequest();
-			xhr.open('POST', getToken.php, true);
+			xhr.open('POST', gettoken.php, true);
+			xhr.setRequestHeader("Content-type", "application/json");
 			xhr.onreadystatechange = function() {
 				if (this.readyState !== 4)
 				{
