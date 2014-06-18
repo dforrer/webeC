@@ -1,9 +1,7 @@
 // FORRER: siteUrl cannot end in "/"
 
-var token;
-
 var username;
-var secret;
+var token;
 
 var siteUrl = "http://localhost/webeC";
 
