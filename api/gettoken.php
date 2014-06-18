@@ -4,6 +4,30 @@
  * Copyright Daniel Forrer 2014
  */
 
+
+/**
+Check if a user account exists/create account if it doesn't exist:
+
+POST
+/gettoken.php
+
+BODY
+{
+	"username":"Daniel",
+	"secret":"kleine welt"	(entered by user on demand)
+}
+
+RESPONSE (example - success)
+{
+	"token":"53a03780311a5"
+}
+
+RESPONSE (example - failure)
+{
+	"token":null
+}
+ */
+
 // Connect to mysql-database
 //---------------------------
 $con = mysqli_connect('localhost', 'root', 'y9asCPTE', 'item_manager');

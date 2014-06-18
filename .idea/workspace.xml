@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/gettoken.php" afterPath="$PROJECT_DIR$/api/gettoken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.js" afterPath="$PROJECT_DIR$/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webeC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,24 +28,41 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="81" selection-start="1721" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="885">
+            <state line="42" column="81" selection-start="1721" selection-end="1739" vertical-scroll-proportion="-24.375" vertical-offset="45" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gettoken.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/gettoken.php">
+      <file leaf-file-name="getitems.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/getitems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="35" selection-start="507" selection-end="507" vertical-scroll-proportion="0.4107143" vertical-offset="0" max-vertical-offset="1815">
+            <state line="22" column="4" selection-start="194" selection-end="194" vertical-scroll-proportion="0.36719707" vertical-offset="0" max-vertical-offset="3030">
+              <folding>
+                <marker date="1403102890000" expanded="true" signature="2554:2686" placeholder="SELECT tag_i..items_tags..." />
+                <marker date="1403102890000" expanded="true" signature="2554:2664" placeholder="SELECT tag_i..items_tags..." />
+                <marker date="1403102890000" expanded="true" signature="2577:2616" placeholder="SELECT name ..tags..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="additem.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/additem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="17" selection-start="2493" selection-end="2493" vertical-scroll-proportion="-66.25" vertical-offset="360" max-vertical-offset="3105">
               <folding>
                 <element signature="e#7#46#0" expanded="true" />
-                <marker date="1403022862000" expanded="true" signature="1233:2011" placeholder="INSERT INTO ..." />
-                <marker date="1403022862000" expanded="true" signature="1233:1375" placeholder="INSERT INTO ..." />
-                <marker date="1403022862000" expanded="true" signature="1233:1303" placeholder="INSERT INTO ..." />
-                <marker date="1403022862000" expanded="true" signature="1966:1983" placeholder="------------..." />
-                <marker date="1403022862000" expanded="true" signature="2043:2097" placeholder="/* while ($r..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteitem.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/deleteitem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="0" selection-start="505" selection-end="1405" vertical-scroll-proportion="-48.333332" vertical-offset="115" max-vertical-offset="2190">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,7 +121,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/javascript.js" />
         <option value="$PROJECT_DIR$/api/dbconnection.php" />
+        <option value="$PROJECT_DIR$/api/additem.php" />
+        <option value="$PROJECT_DIR$/api/deleteitem.php" />
         <option value="$PROJECT_DIR$/api/gettoken.php" />
+        <option value="$PROJECT_DIR$/api/getitems.php" />
       </list>
     </option>
   </component>
@@ -206,6 +224,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="" />
@@ -216,7 +251,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="840" y="22" width="840" height="974" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -224,7 +259,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31785715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31785715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -266,12 +301,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="45" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="510">
           <folding>
-            <element signature="e#7#46#0" expanded="true" />
-            <marker date="1403022862000" expanded="true" signature="1233:2011" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1233:1375" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1233:1303" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1966:1983" placeholder="------------..." />
-            <marker date="1403022862000" expanded="true" signature="2043:2097" placeholder="/* while ($r..." />
+            <element signature="e#7#46#0" expanded="false" />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="------------..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="/* while ($r..." />
           </folding>
         </state>
       </provider>
@@ -374,13 +409,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="81" selection-start="1721" selection-end="1739" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="659" column="18" selection-start="18830" selection-end="18836" vertical-scroll-proportion="-11.884615" vertical-offset="9576" max-vertical-offset="12825">
@@ -400,14 +428,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/gettoken.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="35" selection-start="507" selection-end="507" vertical-scroll-proportion="0.4107143" vertical-offset="0" max-vertical-offset="1815">
+        <state line="26" column="4" selection-start="316" selection-end="316" vertical-scroll-proportion="0.14687882" vertical-offset="270" max-vertical-offset="2175">
+          <folding>
+            <element signature="e#7#46#0" expanded="false" />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="------------..." />
+            <marker date="1403067216000" expanded="true" signature="-1:-1" placeholder="/* while ($r..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="81" selection-start="1721" selection-end="1739" vertical-scroll-proportion="-24.375" vertical-offset="45" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/additem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="17" selection-start="2493" selection-end="2493" vertical-scroll-proportion="-66.25" vertical-offset="360" max-vertical-offset="3105">
           <folding>
             <element signature="e#7#46#0" expanded="true" />
-            <marker date="1403022862000" expanded="true" signature="1233:2011" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1233:1375" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1233:1303" placeholder="INSERT INTO ..." />
-            <marker date="1403022862000" expanded="true" signature="1966:1983" placeholder="------------..." />
-            <marker date="1403022862000" expanded="true" signature="2043:2097" placeholder="/* while ($r..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/deleteitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="505" selection-end="1405" vertical-scroll-proportion="-48.333332" vertical-offset="115" max-vertical-offset="2190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/getitems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="4" selection-start="194" selection-end="194" vertical-scroll-proportion="0.36719707" vertical-offset="0" max-vertical-offset="3030">
+          <folding>
+            <marker date="1403102890000" expanded="true" signature="2554:2686" placeholder="SELECT tag_i..items_tags..." />
+            <marker date="1403102890000" expanded="true" signature="2554:2664" placeholder="SELECT tag_i..items_tags..." />
+            <marker date="1403102890000" expanded="true" signature="2577:2616" placeholder="SELECT name ..tags..." />
           </folding>
         </state>
       </provider>
