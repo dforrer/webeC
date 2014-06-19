@@ -624,7 +624,43 @@ function addSlider(link) {
 
 function getToken()
 {
+	// Prepare JSON-Object
+	//---------------------
+	var obj = new Object();
 
+	obj.username = document.getElementById('username').value;
+	obj.secret	 = document.getElementById('secret').value;
+
+	var jsonString= JSON.stringify(obj);
+
+	// AJAX-Request to getToken
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'api/gettoken.php', true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.onreadystatechange = function()
+	{
+		if (this.readyState !== 4)
+		{
+			return;
+		}
+		if (this.status !== 200)
+		{
+			return;
+		}
+		// Do something here
+		var data = new Object();
+		data.resp = JSON.parse(this.responseText);
+		if(data.resp.token == null)
+		{
+			alert('Login failed!');
+		}
+		else
+		{
+			alert('Token:'+data.resp.token);
+			
+		}
+	};
+	xhr.send(jsonString);
 }
 
 
@@ -643,43 +679,18 @@ function addNewItem()
 function checkCookie() 
 {
 	token = getCookie("token");
+	username = getCookie("username");
 
     if ( token != "") 
     {
 		// TODO: Load new items
-		
+
     }
     else
     {
-
-		return;
 		//TODO: Add non-draggable slider
-
-        if (secret != "" && secret != null) 
-        {
-			// AJAX-Request to getToken
-			var xhr = new XMLHttpRequest();
-			xhr.open('POST', gettoken.php, true);
-			xhr.setRequestHeader("Content-type", "application/json");
-			xhr.onreadystatechange = function() {
-				if (this.readyState !== 4)
-				{
-					return;
-				}
-				if (this.status !== 200)
-				{
-					return;
-				}
-				// Do something here
-				data.resp = JSON.parse(x.responseText);
-        		if(data.resp.status=='success'){
-        		    alert('That worked!');
-    		    }else{
-		            alert('That didn\'t work!');
-		        }
-			};
-			xhr.send();		
-        }
+		var timestamp = new Date();
+		addSlider('login.html?timestamp=' + timestamp.getTime());
     }
 }
 
@@ -737,23 +748,7 @@ function init()
 	//-------------
 	checkCookie();
 
-	// Register ID "topinput" for ENTER keys
-	//---------------------------------------
-	var topinput = document.getElementById('topinput');
-	topinput.onkeypress = function(e)
-	{
-	    if (!e) e = window.event;
-    	var keyCode = e.keyCode || e.which;
-    	if (keyCode == '13')
-    	{
-      		// Enter pressed
-			handleCommand(topinput.value);
-      		return false;
-    	}
-  	}
-
-
-
+/*
 	// Elemente initialisieren
 	var item1 = new Container(1, 'Einkaufen Heute', 'high', '<p><i>Biologie</i> - Fällmittelpumpe 3 ist ausgefallen. Hier steht mal etwas richtig langes! Ein halber Roman steht hier.</p>', 'Einkaufen Geschenke', '12.05.13', '19:56', false, null, 'undone', 'high', 'detail1.html');
 
@@ -775,7 +770,7 @@ function init()
 	items[3] = item4;
 	items[4] = item5;
 	items[5] = item6;
-	
+*/
 
 	// FORRER: Add Listener for Orientation change
 	window.addEventListener('orientationchange', function() {
@@ -817,10 +812,10 @@ function init()
 	// Setup für Slider-Window
 
 	// Show menu
-	document.getElementById('menubutton').addEventListener(endEvent, function() {
+	document.getElementById('addbutton').addEventListener(endEvent, function() {
 		// ?v=1 sorgt dafür dass die Seite neu geladen wird
 		var timestamp = new Date();  
-		var link = 'editItem.html?timestamp=' + timestamp.getTime();
+		var link = 'additem.html?timestamp=' + timestamp.getTime();
 		addSlider(link);
 	});
 	
