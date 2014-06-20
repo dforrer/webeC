@@ -633,7 +633,8 @@ function getToken()
 
 	var jsonString= JSON.stringify(obj);
 
-	// AJAX-Request to getToken
+	// AJAX-Request to gettoken.php
+	//------------------------------
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', 'api/gettoken.php', true);
 	xhr.setRequestHeader("Content-type", "application/json");
@@ -657,7 +658,8 @@ function getToken()
 		else
 		{
 			alert('Token:'+data.resp.token);
-			
+			setCookie("username", obj.username,100);
+			setCookie("token", data.resp.token,100);
 		}
 	};
 	xhr.send(jsonString);
@@ -667,13 +669,100 @@ function getToken()
 
 function addNewItem()
 {
-	var prio_new = document.getElementById("prio_new").value;
-	var title_new = document.getElementById("title_new").value;
+	var prio_new 		= document.getElementById("prio_new").value;
+	var title_new 		= document.getElementById("title_new").value;
 	var description_new = document.getElementById("description_new").value;
-	
-	alert(title_new);
+	var tags_new		= document.getElementById("tags_new").value;
+
+	// Prepare JSON-Object
+	//---------------------
+	var obj = new Object();
+
+	obj.username = username;
+	obj.token	 = token;
+	obj.title 	 = title_new;
+	obj.prio 	 = prio_new;
+	obj.tags	 = tags_new;
+	obj.description   = description_new;
+	obj.creation_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
+
+	var jsonString= JSON.stringify(obj);
+
+	// AJAX-Request to gettoken.php
+	//------------------------------
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'api/additem.php', true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.onreadystatechange = function()
+	{
+		if (this.readyState !== 4)
+		{
+			return;
+		}
+		if (this.status !== 200)
+		{
+			return;
+		}
+		// Ignore response of "item_id"
+
+	};
+	xhr.send(jsonString);
 }
 
+
+function getitems()
+{
+	// Prepare JSON-Object
+	//---------------------
+	var obj = new Object();
+
+	obj.username = username;
+	obj.token	 = token;
+
+	var jsonString= JSON.stringify(obj);
+
+	// AJAX-Request to gettoken.php
+	//------------------------------
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'api/getitems.php', true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.onreadystatechange = function()
+	{
+		if (this.readyState !== 4)
+		{
+			return;
+		}
+		if (this.status !== 200)
+		{
+			return;
+		}
+		// Do something with the response
+		//--------------------------------
+		var data = new Object();
+		console.log(this.responseText);
+		data.resp = JSON.parse(this.responseText);
+		if(data.resp.items == null)
+		{
+			alert('Loading items failed!');
+		}
+		else
+		{
+			alert('items:'+data.resp.items);
+			// TODO: iterate through response
+			for (var i = 0; i < data.resp.items.length ; i++)
+			{
+				var itemJSON = data.resp.items[i];
+				var item = new Container(itemJSON.item_id, itemJSON.title, 'high', '<p><i>Gasdepot 1</i> - Das Depot ist zu 80% voll.</p>', itemJSON.tags, '05.04.13', '12:20', false, null, 'undone', 'high', '');
+				items.push(item);
+				item.add(1);
+				console.log(item.item_id);
+			}
+			updateAlertsHeight(items);
+			reorderAlerts(items);
+		}
+	};
+	xhr.send(jsonString);
+}
 
 
 function checkCookie() 
@@ -684,7 +773,8 @@ function checkCookie()
     if ( token != "") 
     {
 		// TODO: Load new items
-
+		alert("Logged in as: " + username);
+		getitems();
     }
     else
     {
