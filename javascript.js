@@ -698,6 +698,10 @@ function getToken()
 		if(data.resp.token == null)
 		{
 			alert('Login failed!');
+			
+			//TODO: Add non-draggable slider
+			var timestamp = new Date();
+			addSlider('login.html?timestamp=' + timestamp.getTime());
 		}
 		else
 		{
@@ -730,8 +734,9 @@ function addNewItem()
 	obj.description   = description_new;
 	obj.creation_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
-
 	var jsonString= JSON.stringify(obj);
+
+	//alert(jsonString);
 
 	// AJAX-Request to gettoken.php
 	//------------------------------
@@ -771,7 +776,7 @@ function updateItem(item_id, title, prio, tags, description, creation_date, is_r
 	obj.creation_date = creation_date.getFullYear() + "-"
 		+ (creation_date.getMonth() + 1) + '-'
 		+ creation_date.getDate() + " "
-		+ (creation_date.getHours() + (creation_date.getTimezoneOffset()/60)*(-1)) + ':'
+		+ creation_date.getHours() + ':'
 		+ creation_date.getMinutes() + ":"
 		+ creation_date.getSeconds();
 	console.log(obj.creation_date);
@@ -779,7 +784,7 @@ function updateItem(item_id, title, prio, tags, description, creation_date, is_r
 
 	var jsonString= JSON.stringify(obj);
 
-	alert(jsonString);
+	//alert(jsonString);
 
 	// AJAX-Request to gettoken.php
 	//------------------------------
@@ -797,7 +802,7 @@ function updateItem(item_id, title, prio, tags, description, creation_date, is_r
 			return;
 		}
 		// Ignore response of "item_id"
-		alert(this.responseText);
+		//alert(this.responseText);
 	};
 	xhr.send(jsonString);
 }
@@ -867,6 +872,7 @@ function getitems()
 		{
 			return;
 		}
+
 		// Do something with the response
 		//--------------------------------
 		var data = new Object();
@@ -875,6 +881,9 @@ function getitems()
 		if(data.resp.items == null)
 		{
 			alert('Loading items failed!');
+			//TODO: Add non-draggable slider
+			var timestamp = new Date();
+			addSlider('login.html?timestamp=' + timestamp.getTime());
 		}
 		else
 		{
