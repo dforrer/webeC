@@ -89,7 +89,7 @@ function debug(tmp, arg)
 	}
 }
 
-function reorderAlerts(itemArray)
+function reorderAlerts(itemArray, speed)
 {
 	itemArray.sort(compareAlertlevel);
 	itemArray.sort(compareState);
@@ -97,7 +97,7 @@ function reorderAlerts(itemArray)
 	for ( i = 0; i < itemArray.length; i++)
 	{
 		itemArray[i].setTopOffset(offset);
-		itemArray[i].setVerticalPosition(offset, 400);
+		itemArray[i].setVerticalPosition(offset, speed);
 		offset += itemArray[i].getDivsuper().offsetHeight;
 	}
 }
@@ -166,7 +166,7 @@ function updateView() {
 	}
 	setTimeout(function() {
 		updateAlertsHeight(items);
-		reorderAlerts(items);
+		reorderAlerts(items, 400);
 	}, 500);
 
 }
@@ -705,7 +705,9 @@ function getToken()
 		}
 		else
 		{
-			alert('Token:'+data.resp.token);
+			//alert('Token:'+data.resp.token);
+			username = obj.username;
+			token = data.resp.token;
 			setCookie("username", obj.username,100);
 			setCookie("token", data.resp.token,100);
 		}
@@ -918,7 +920,7 @@ function getitems()
 				console.log(itemJSON.item_id);
 			}
 			updateAlertsHeight(items);
-			reorderAlerts(items);
+			reorderAlerts(items, 0);
 		}
 	};
 	xhr.send(jsonString);
@@ -1082,7 +1084,7 @@ function init()
 	document.getElementById('alerts').style.width = window.innerWidth + 'px';
 
 	updateAlertsHeight(items);
-	reorderAlerts(items);
+	reorderAlerts(items, 0);
 
 	debug(window.innerWidth, 'append');
 	// -----------------------------------------------------------------------------
