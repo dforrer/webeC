@@ -328,31 +328,37 @@ function slider(id) {
 }
 
 // This is a draggable Alert-Object
-function Container(id, title, icon, text, highlightedtext, date, time, state, alertlevel, detailLINK) {
+function Container(item_id, title, description, tags, creation_date, is_read, prio, detailLINK)
+{
 	// Object Variables (can't have "this.")
-	var id = id;
-	var title = title;
+	var alertLevel;
+	var icon;
+	switch (prio)
+	{
+		case 3:
+			alertLevel = "high";
+			icon = "high";
+			break;
+		case 2:
+			alertLevel = "medium";
+			icon = "medium";
+			break;
+		case 1:
+			alertLevel = "low";
+			icon = "low";
+			break;
 
-
-	var icon = icon;
-
-
-	var text = text;
-	var highlightedtext = highlightedtext;
-	var date = date;
-	var time = time;
-	var alertlevel = alertlevel;
-	var state = state;
+	}
+	var state = "done";
+	if (is_read == 0)
+	{
+		state = "undone";
+	}
 	var divsuper;
 	var content;
 	var left;
 	var right;
 	var topOffset;
-
-	var n = date.split(".");
-	var m = time.split(":");
-	var dateObject = new Date(n[2], n[1], n[0], m[0], m[1], 0, 0);
-
 	var touchstarted = false;
 	var startX = 0;
 	var startY = 0;
@@ -368,7 +374,7 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 		return state;
 	}
 	this.getAlertlevel = function() {
-		return alertlevel;
+		return alertLevel;
 	}
 	this.getDivsuper = function() {
 		return divsuper;
@@ -392,20 +398,29 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 		// divsuper contains three divs: left, content, right
 		divsuper = document.createElement('div');
 		divsuper.setAttribute('class', 'divsuper');
-		divsuper.setAttribute('id', id);
+		divsuper.setAttribute('id', item_id);
 
 		left = document.createElement('div');
 		left.setAttribute('class', 'leftdrag');
-		left.innerHTML = "<img id='arrowleft" + id + "' src='pictures/pfeil_left.png?v=1' style='width:42px'/><p style='margin:10px; color: #434343; font-size:14px;'><b>Erledigt?</b></p>";
+		left.innerHTML = "<img id='arrowleft" + item_id + "' src='pictures/pfeil_left.png?v=1' style='width:42px'/><p style='margin:10px; color: #434343; font-size:14px;'><b>Erledigt?</b></p>";
 
 		right = document.createElement('div');
 		right.setAttribute('class', 'rightdrag');
-		right.innerHTML = "<img id='arrowright" + id + "' src='pictures/pfeil_right.png?v=1' style='width:42px'/><p style='margin:10px; color: #434343; font-size:14px;'><b>Löschen?</b></p>";
+		right.innerHTML = "<img id='arrowright" + item_id + "' src='pictures/pfeil_right.png?v=1' style='width:42px'/><p style='margin:10px; color: #434343; font-size:14px;'><b>Löschen?</b></p>";
 
 		content = document.createElement('div');
 
 		// Set id, class of content
-		content.setAttribute('class', alertlevel);
+		if (is_read == 1)
+		{
+			state = 'done';
+			content.setAttribute('class', 'done');
+		}
+		else
+		{
+			state = 'undone';
+			content.setAttribute('class', alertLevel);
+		}
 		content.style.width = window.innerWidth + 'px';
 		content.style.opacity = opacity;
 
@@ -422,11 +437,6 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 		content.addEventListener("click", this.clickHandler, false);
 
 		update();
-	}
-
-	this.remove = function()
-	{
-		document.getElementById('alerts').removeChild(divsuper);
 	}
 
 	function getHTMLOfContent() {
@@ -454,32 +464,37 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 		}
 		table += "</td>";
 		table += "<td style='width:1%'><p class='dates'>";
-		table += date;
+		table += creation_date.getDate() + '.' + (creation_date.getMonth() + 1) + '.' + (creation_date.getFullYear()-2000);
 		table += "</p></td>";
 		table += "</tr>";
 		table += "<tr><td style='height:10px'></td></tr>";
 		table += "<tr>";
 		table += "<td></td>";
-		table += "<td style='vertical-align: top' id='text" + id + "'>";
+		table += "<td style='vertical-align: top' id='text" + item_id + "'>";
 
-		if (highlightedtext != null && state == 'undone' && highlightedtext != '')
+
+		if (tags != null && state == 'undone' && tags != '')
 		{
-			table += "<div class='highlight" + alertlevel + "'>";
-			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
+			table += "<div class='highlight" + alertLevel + "'>";
+			var highlightedtext_with_commas = tags.replace(/ /g, ", ");
 			table += highlightedtext_with_commas;
 			table += "</div>";
 		}
-		else if (highlightedtext != null && state == 'done' && highlightedtext != '')
+		else if (tags != null && state == 'done' && tags != '')
 		{
 			table += "<div class='highlightdone'>";
-			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
+			var highlightedtext_with_commas = tags.replace(/ /g, ", ");
 			table += highlightedtext_with_commas;
 			table += "</div>";
 		}
-		table += text;
+		table += "<p>";
+		table += description;
+		table += "</p>";
 		table += "</td>";
 		table += "<td style='vertical-align: top'>";
-		table += "<p class='dates'><b>" + time + "</b></p>";
+		table += "<p class='dates'><b>";
+		table += (creation_date.getHours() + (creation_date.getTimezoneOffset()/60)*(-1)) + ':' + creation_date.getMinutes();
+		table += "</b></p>";
 		table += "</td>";
 		table += "</tr>";
 		table += "</table>";
@@ -545,23 +560,23 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 			}
 
 			if (distanceX > 160) {
-				var arrow = document.getElementById('arrowleft' + id);
+				var arrow = document.getElementById('arrowleft' + item_id);
 				arrow.style.webkitTransitionDuration = "300ms";
 				arrow.style.webkitTransform = "rotateZ(-180deg)";
 			}
 			if (distanceX < 160 && distanceX > 0) {
-				var arrow = document.getElementById('arrowleft' + id);
+				var arrow = document.getElementById('arrowleft' + item_id);
 				arrow.style.webkitTransitionDuration = "300ms";
 				arrow.style.webkitTransform = "rotateZ(0deg)";
 			}
 			if (distanceX > -160) {
-				var arrow = document.getElementById('arrowright' + id);
+				var arrow = document.getElementById('arrowright' + item_id);
 				arrow.style.webkitTransitionDuration = "300ms";
 				arrow.style.webkitTransform = "rotateZ(0deg)";
 			}
 
 			if (distanceX < -160) {
-				var arrow = document.getElementById('arrowright' + id);
+				var arrow = document.getElementById('arrowright' + item_id);
 				arrow.style.webkitTransitionDuration = "300ms";
 				arrow.style.webkitTransform = "rotateZ(180deg)";
 			}
@@ -591,21 +606,24 @@ function Container(id, title, icon, text, highlightedtext, date, time, state, al
 			// the following conditions have been discussed in details
 			if (distanceX > 160)
 			{
-				if (state == 'undone')
+				if (is_read == 0)
 				{
 					state = 'done';
+					is_read = 1;
 					content.setAttribute('class', 'done');
 				}
 				else
 				{
 					state = 'undone';
-					content.setAttribute('class', alertlevel);
+					is_read = 0;
+					content.setAttribute('class', alertLevel);
 				}
+				updateItem(item_id, title, prio, tags, description, creation_date, is_read);
 			}
 			else if (distanceX < -160)
 			{
 				// TODO: Delete item
-				deleteItem(id);
+				deleteItem(item_id);
 
 			}
 		}
@@ -712,6 +730,7 @@ function addNewItem()
 	obj.description   = description_new;
 	obj.creation_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
+
 	var jsonString= JSON.stringify(obj);
 
 	// AJAX-Request to gettoken.php
@@ -731,19 +750,58 @@ function addNewItem()
 		}
 		// Ignore response of "item_id"
 
-
-		for ( i = 0; i < items.length; i++)
-		{
-			items[i].remove();
-		}
-		items.clear;
-
-		// load all items again
 		getitems();
-
 	};
 	xhr.send(jsonString);
 }
+
+function updateItem(item_id, title, prio, tags, description, creation_date, is_read)
+{
+	// Prepare JSON-Object
+	//---------------------
+	var obj = new Object();
+
+	obj.username = username;
+	obj.token	 = token;
+	obj.item_id  = item_id;
+	obj.title	 = title;
+	obj.prio	 = prio;
+	obj.tags	 = tags;
+	obj.description = description;
+	obj.creation_date = creation_date.getFullYear() + "-"
+		+ (creation_date.getMonth() + 1) + '-'
+		+ creation_date.getDate() + " "
+		+ (creation_date.getHours() + (creation_date.getTimezoneOffset()/60)*(-1)) + ':'
+		+ creation_date.getMinutes() + ":"
+		+ creation_date.getSeconds();
+	console.log(obj.creation_date);
+	obj.is_read = is_read;
+
+	var jsonString= JSON.stringify(obj);
+
+	alert(jsonString);
+
+	// AJAX-Request to gettoken.php
+	//------------------------------
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'api/updateitem.php', true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.onreadystatechange = function()
+	{
+		if (this.readyState !== 4)
+		{
+			return;
+		}
+		if (this.status !== 200)
+		{
+			return;
+		}
+		// Ignore response of "item_id"
+		alert(this.responseText);
+	};
+	xhr.send(jsonString);
+}
+
 
 function deleteItem(item_id)
 {
@@ -774,14 +832,8 @@ function deleteItem(item_id)
 		}
 		// Ignore response of "item_id"
 
-
-		for ( i = 0; i < items.length; i++)
-		{
-			items[i].remove();
-		}
-		items.clear;
-
 		// load all items again
+		//----------------------
 		getitems();
 
 	};
@@ -826,39 +878,32 @@ function getitems()
 		}
 		else
 		{
-			//alert('items:'+this.responseText);
-			// TODO: iterate through response
+			// Clear items-Array from previous items
+			//---------------------------------------
+			var alerts = document.getElementById('alerts');
+			while (alerts.firstChild)
+			{
+				alerts.removeChild(alerts.firstChild);
+			}
+			items.clear;
+
+			// Iterate through response
+			//--------------------------
 			for (var i = 0; i < data.resp.items.length ; i++)
 			{
 				var itemJSON = data.resp.items[i];
 				var itemDate = new Date(itemJSON.creation_date.replace(/-/g,"/"));
-				var itemDateString = itemDate.getDate() + '.' + (itemDate.getMonth() + 1) + '.' + (itemDate.getFullYear());
-				var itemTimeString = (itemDate.getHours() + (itemDate.getTimezoneOffset()/60)*(-1)) + ':' + itemDate.getMinutes();
 
-				var alertLevel;
-				switch (itemJSON.prio)
-				{
-					case 3:
-						alertLevel = "high";
-						break;
-					case 2:
-						alertLevel = "medium";
-						break;
-					case 1:
-						alertLevel = "low";
-						break;
-
-				}
-
-				var doneAttr = "done";
-				if (itemJSON.is_read == 0)
-				{
-					doneAttr = "undone";
-				}
-
-				console.log(itemJSON.tags);
-
-				var item = new Container(itemJSON.item_id, itemJSON.title, alertLevel, '<p>' + itemJSON.description + '</p>', itemJSON.tags, itemDateString, itemTimeString, doneAttr, alertLevel, '');
+				// function Container(item_id, title, description, tags, creation_date, is_read, prio, detailLINK)
+				var item = new Container(
+					itemJSON.item_id,
+					itemJSON.title,
+					itemJSON.description,
+					itemJSON.tags,
+					itemDate,
+					itemJSON.is_read,
+					itemJSON.prio,
+					'');
 				items.push(item);
 				item.add(1);
 				console.log(itemJSON.item_id);
