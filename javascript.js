@@ -70,49 +70,65 @@ function getSVGBecken(color, scale) {
 	return shape;
 }
 
-function openLink(theLink) {
+function openLink(theLink)
+{
 	window.location.href = theLink.href;
 }
 
 // FORRER: not used at the moment
-function smoothScrollToTop() {
-	if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+function smoothScrollToTop()
+{
+	if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0)
+	{
 		var topPosition = document.body.scrollTop || document.documentElement.scrollTop;
 		debug("Topposition:" + topPosition, "override");
-		if (topPosition > 0) {
+		if (topPosition > 0)
+		{
 			window.scrollBy(0, -13);
-		} else {
+		}
+		else
+		{
 			window.scrollBy(0, 13);
 		}
 		timeOut = setTimeout('smoothScrollToTop()', 10);
-	} else {
+	}
+	else
+	{
 		clearTimeout(timeOut);
 	}
 }
 
-function debug(tmp, arg) {
+function debug(tmp, arg)
+{
 	return;
-	if (arg == "override") {
+	if (arg == "override")
+	{
 		document.getElementById('info').innerHTML = tmp;
-	} else if (arg == "append") {
+	}
+	else if (arg == "append")
+	{
 		document.getElementById('info').innerHTML += '</br>' + tmp;
 	}
 }
 
-function reorderAlerts(itemArray) {
+function reorderAlerts(itemArray)
+{
 	itemArray.sort(compareAlertlevel);
 	itemArray.sort(compareState);
 	var offset = 0;
-	for ( i = 0; i < itemArray.length; i++) {
+	for ( i = 0; i < itemArray.length; i++)
+	{
 		itemArray[i].setTopOffset(offset);
 		itemArray[i].setVerticalPosition(offset, 400);
 		offset += itemArray[i].getDivsuper().offsetHeight;
 	}
 }
 
-function updateAlertsHeight(itemArray) {
+function updateAlertsHeight(itemArray)
+{
 	var h = 0;
-	for ( i = 0; i < itemArray.length; i++) {
+	for ( i = 0; i < itemArray.length; i++)
+	{
 		h += itemArray[i].getDivsuper().offsetHeight;
 	}
 	document.getElementById('alerts').style.height = h + 'px';
@@ -338,7 +354,11 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 	// Object Variables (can't have "this.")
 	var id = id;
 	var title = title;
+
+
 	var icon = icon;
+
+
 	var text = text;
 	var highlightedtext = highlightedtext;
 	var date = date;
@@ -380,9 +400,11 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 	this.getTopOffset = function() {
 		return topOffset;
 	}
+
 	this.setTopOffset = function(val) {
 		topOffset = val;
 	}
+
 	this.setVerticalPosition = function(topOffset, time) {
 		divsuper.style.webkitTransitionDuration = time + "ms";
 		divsuper.style.webkitTransitionTimingFunction = "cubic-bezier(.42, 0, .58, 1)";
@@ -484,9 +506,11 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		content.style.width = window.innerWidth + 'px';
 		content.innerHTML = getHTMLOfContent();
 	}
+
 	this.clickHandler = function(event) {
-		addSlider(detailLINK);
+		// DO NOTHING
 	}
+
 	this.startHandler = function(event) {
 		debug("startHandler", "append");
 		touchstarted = true;
@@ -551,6 +575,7 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 			}
 		}
 	}
+
 	function comeBack(bezierVal, time) {
 		debug("comeBack", "append");
 		divsuper.style.webkitTransitionDuration = time + "ms";
@@ -558,8 +583,8 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		divsuper.style.webkitTransform = "translate3d(0, " + topOffset + "px, 0)";
 	}
 
-	// FORRER: moveLeft(), moveRight(), comeBack() need to be defined before we
-	// use them
+	// FORRER: moveLeft(), moveRight(), comeBack() need to be defined before we use them
+
 	this.endHandler = function(event) {
 		clearInterval(timer);
 
