@@ -141,6 +141,8 @@ while ($row = mysqli_fetch_array($result))
 	echo "\"" . $row['title'] . "\",";
 	echo "\"prio\":";
 	echo $row['prio'] . ",";
+	echo "\"description\":";
+	echo "\"" . $row['description'] . "\",";
 
 	echo "\"tags\":\"";
 
