@@ -328,7 +328,7 @@ function slider(id) {
 }
 
 // This is a draggable Alert-Object
-function Container(id, title, icon, text, highlightedtext, date, time, instructionsYESNO, instructionsLINK, state, alertlevel, detailLINK) {
+function Container(id, title, icon, text, highlightedtext, date, time, state, alertlevel, detailLINK) {
 	// Object Variables (can't have "this.")
 	var id = id;
 	var title = title;
@@ -341,8 +341,6 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 	var highlightedtext = highlightedtext;
 	var date = date;
 	var time = time;
-	var instructionsYESNO = instructionsYESNO;
-	var instructionsLINK = instructionsLINK;
 	var alertlevel = alertlevel;
 	var state = state;
 	var divsuper;
@@ -389,7 +387,8 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		divsuper.style.webkitTransform = "translate3d(0," + topOffset + "px, 0)";
 	}
 
-	this.add = function(opacity) {
+	this.add = function(opacity)
+	{
 		// divsuper contains three divs: left, content, right
 		divsuper = document.createElement('div');
 		divsuper.setAttribute('class', 'divsuper');
@@ -424,21 +423,33 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 
 		update();
 	}
+
+	this.remove = function()
+	{
+		document.getElementById('alerts').removeChild(divsuper);
+	}
+
 	function getHTMLOfContent() {
 		// Set Content of content
 		var table = "<table>";
 		table += "<tr>";
 		table += "<td style='width:1%'>";
-		if (state == 'done') {
+		if (state == 'done')
+		{
 			table += "<img class='alerticon' style='opacity:0.5;' src='pictures/" + icon + "_dark.png' />";
-		} else {
+		}
+		else
+		{
 			table += "<img class='alerticon' src='pictures/" + icon + "_white.png' />";
 		}
 		table += "</td>";
 		table += "<td style='width:98%'>";
-		if (state == 'undone') {
+		if (state == 'undone')
+		{
 			table += "<h1>" + title + "</h1>";
-		} else {
+		}
+		else
+		{
 			table += "<h2>" + title + "</h2>";
 		}
 		table += "</td>";
@@ -451,12 +462,15 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		table += "<td></td>";
 		table += "<td style='vertical-align: top' id='text" + id + "'>";
 
-		if (highlightedtext != null && state == 'undone') {
+		if (highlightedtext != null && state == 'undone' && highlightedtext != '')
+		{
 			table += "<div class='highlight" + alertlevel + "'>";
 			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
 			table += highlightedtext_with_commas;
 			table += "</div>";
-		} else if (highlightedtext != null && state == 'done') {
+		}
+		else if (highlightedtext != null && state == 'done' && highlightedtext != '')
+		{
 			table += "<div class='highlightdone'>";
 			var highlightedtext_with_commas = highlightedtext.replace(/ /g, ", ");
 			table += highlightedtext_with_commas;
@@ -563,7 +577,8 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 
 	// FORRER: moveLeft(), moveRight(), comeBack() need to be defined before we use them
 
-	this.endHandler = function(event) {
+	this.endHandler = function(event)
+	{
 		clearInterval(timer);
 
 		// debug("distanceX px:"+ distanceX + " per ms: " +
@@ -571,21 +586,27 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		var absX = Math.abs(distanceX);
 		var absY = Math.abs(distanceY);
 
-		if (absX > absY) {
+		if (absX > absY)
+		{
 			// the following conditions have been discussed in details
-			if (distanceX > 160) {
-				if (state == 'undone') {
+			if (distanceX > 160)
+			{
+				if (state == 'undone')
+				{
 					state = 'done';
 					content.setAttribute('class', 'done');
-				} else {
+				}
+				else
+				{
 					state = 'undone';
 					content.setAttribute('class', alertlevel);
 				}
-			} else if (distanceX < -160) {
-				
+			}
+			else if (distanceX < -160)
+			{
 				// TODO: Delete item
-				
-				
+				deleteItem(id);
+
 			}
 		}
 		update();
@@ -601,6 +622,8 @@ function Container(id, title, icon, text, highlightedtext, date, time, instructi
 		// debug("at the end", "append");
 	}
 }
+
+
 
 function addSlider(link) {
 	var slide = new slider();
@@ -708,6 +731,59 @@ function addNewItem()
 		}
 		// Ignore response of "item_id"
 
+
+		for ( i = 0; i < items.length; i++)
+		{
+			items[i].remove();
+		}
+		items.clear;
+
+		// load all items again
+		getitems();
+
+	};
+	xhr.send(jsonString);
+}
+
+function deleteItem(item_id)
+{
+	// Prepare JSON-Object
+	//---------------------
+	var obj = new Object();
+
+	obj.username = username;
+	obj.token	 = token;
+	obj.item_id  = item_id;
+
+	var jsonString= JSON.stringify(obj);
+
+	// AJAX-Request to gettoken.php
+	//------------------------------
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'api/deleteitem.php', true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.onreadystatechange = function()
+	{
+		if (this.readyState !== 4)
+		{
+			return;
+		}
+		if (this.status !== 200)
+		{
+			return;
+		}
+		// Ignore response of "item_id"
+
+
+		for ( i = 0; i < items.length; i++)
+		{
+			items[i].remove();
+		}
+		items.clear;
+
+		// load all items again
+		getitems();
+
 	};
 	xhr.send(jsonString);
 }
@@ -750,15 +826,42 @@ function getitems()
 		}
 		else
 		{
-			alert('items:'+data.resp.items);
+			//alert('items:'+this.responseText);
 			// TODO: iterate through response
 			for (var i = 0; i < data.resp.items.length ; i++)
 			{
 				var itemJSON = data.resp.items[i];
-				var item = new Container(itemJSON.item_id, itemJSON.title, 'high', '<p><i>Gasdepot 1</i> - Das Depot ist zu 80% voll.</p>', itemJSON.tags, '05.04.13', '12:20', false, null, 'undone', 'high', '');
+				var itemDate = new Date(itemJSON.creation_date.replace(/-/g,"/"));
+				var itemDateString = itemDate.getDate() + '.' + (itemDate.getMonth() + 1) + '.' + (itemDate.getFullYear());
+				var itemTimeString = (itemDate.getHours() + (itemDate.getTimezoneOffset()/60)*(-1)) + ':' + itemDate.getMinutes();
+
+				var alertLevel;
+				switch (itemJSON.prio)
+				{
+					case 3:
+						alertLevel = "high";
+						break;
+					case 2:
+						alertLevel = "medium";
+						break;
+					case 1:
+						alertLevel = "low";
+						break;
+
+				}
+
+				var doneAttr = "done";
+				if (itemJSON.is_read == 0)
+				{
+					doneAttr = "undone";
+				}
+
+				console.log(itemJSON.tags);
+
+				var item = new Container(itemJSON.item_id, itemJSON.title, alertLevel, '<p>' + itemJSON.description + '</p>', itemJSON.tags, itemDateString, itemTimeString, doneAttr, alertLevel, '');
 				items.push(item);
 				item.add(1);
-				console.log(item.item_id);
+				console.log(itemJSON.item_id);
 			}
 			updateAlertsHeight(items);
 			reorderAlerts(items);
