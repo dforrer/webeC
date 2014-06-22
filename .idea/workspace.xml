@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.js" afterPath="$PROJECT_DIR$/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/getitems.php" afterPath="$PROJECT_DIR$/api/getitems.php" />
     </list>
     <ignored path="webeC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,7 +108,7 @@
       <file leaf-file-name="getitems.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/getitems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="33" selection-start="2519" selection-end="2519" vertical-scroll-proportion="3.1666667" vertical-offset="2206" max-vertical-offset="3060">
+            <state line="183" column="25" selection-start="3291" selection-end="3291" vertical-scroll-proportion="-17.791666" vertical-offset="2288" max-vertical-offset="3060">
               <folding />
             </state>
           </provider>
@@ -147,7 +147,6 @@
       <list>
         <option value="$PROJECT_DIR$/api/dbconnection.php" />
         <option value="$PROJECT_DIR$/api/updateitem.php" />
-        <option value="$PROJECT_DIR$/api/getitems.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/additem.html" />
         <option value="$PROJECT_DIR$/login.html" />
@@ -155,6 +154,7 @@
         <option value="$PROJECT_DIR$/api/deleteitem.php" />
         <option value="$PROJECT_DIR$/api/gettoken.php" />
         <option value="$PROJECT_DIR$/javascript.js" />
+        <option value="$PROJECT_DIR$/api/getitems.php" />
       </list>
     </option>
   </component>
@@ -667,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/getitems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="33" selection-start="2519" selection-end="2519" vertical-scroll-proportion="3.1666667" vertical-offset="2206" max-vertical-offset="3060">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/updateitem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="3330">
@@ -693,6 +686,13 @@
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="31" selection-start="1960" selection-end="1960" vertical-scroll-proportion="-23.958334" vertical-offset="325" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/getitems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="25" selection-start="3291" selection-end="3291" vertical-scroll-proportion="-17.791666" vertical-offset="2288" max-vertical-offset="3060">
           <folding />
         </state>
       </provider>

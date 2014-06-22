@@ -138,11 +138,11 @@ while ($row = mysqli_fetch_array($result))
 	echo "\"item_id\":";
 	echo $row['item_id'] . ",";
 	echo "\"title\":";
-	echo "\"" . $row['title'] . "\",";
+	echo "\"" . addslashes($row['title']) . "\",";
 	echo "\"prio\":";
 	echo $row['prio'] . ",";
 	echo "\"description\":";
-	echo "\"" . $row['description'] . "\",";
+	echo "\"" . addslashes($row['description']) . "\",";
 
 	echo "\"tags\":\"";
 
@@ -170,7 +170,7 @@ while ($row = mysqli_fetch_array($result))
 		{
 			echo " ";
 		}
-		echo $row2['tag_name'];
+		echo addslashes($row2['tag_name']);
 	}
 
 	// Free result set
