@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<p style='color: #ffffff;'>Priorität auswählen:</p>
+<p style='color: #ffffff;'>Choose priority:</p>
 <select id="prio_new" style="font-size: 13px;width: 300px; height: 30px">
 	<option value="3">High</option>
 	<option value="2">Medium</option>
@@ -23,30 +23,30 @@
 
 <br/>
 
-<p style='color: #ffffff;'>Titel eingeben:</p>
+<p style='color: #ffffff;'>Title:</p>
 <input id="title_new" type="text" maxlength="20" style="font-size: 13px;width: 300px; height: 30px"/>
 
 <br/>
 
-<p style='color: #ffffff;'>Beschreibung eingeben:</p>
+<p style='color: #ffffff;'>Description:</p>
 <input id="description_new" type="text" style="font-size: 13px;width: 300px; height: 30px"/>
 
 <br/>
 
-<p style='color: #ffffff;'>Tags eingeben (mit Leerzeichen getrennt):</p>
+<p style='color: #ffffff;'>Tags (separated by spaces):</p>
 <input id="tags_new" type="text" style="font-size: 13px;width: 300px; height: 30px"/>
 
 
 <div style='width: 100%; position: absolute; bottom: 0;'>
 	<a href='#' onClick='addNewItem();setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
 		<div class='navigation_blue_medium'><img src='pictures/erledigen_high.png' class='iconnav' />
-			<h3>speichern</h3>
+			<h3>save item</h3>
 		</div>
 	</a>
 	<a href='#' onClick='setTimeout(function() {topSlider[topSlider.length-1].slideOut(300);},100);return false;'>
 		<div class='navigation_blue_dark'>
 			<img src='pictures/quittieren_high.png' class='iconnav' />
-			<h3>abbrechen</h3>
+			<h3>cancel</h3>
 		</div>
 	</a>
 </div>

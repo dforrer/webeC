@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/getitems.php" afterPath="$PROJECT_DIR$/api/getitems.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/Archiv/settings_dark_high.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/searchicon.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pictures/Archiv/searchicon.png" afterPath="$PROJECT_DIR$/pictures/Archiv/searchicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/additem.html" afterPath="$PROJECT_DIR$/additem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/browser.css" afterPath="$PROJECT_DIR$/browser.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.js" afterPath="$PROJECT_DIR$/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
     </list>
     <ignored path="webeC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,53 +26,65 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="javascript.js" pinned="false" current="true" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/javascript.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="1073" column="38" selection-start="24901" selection-end="24901" vertical-scroll-proportion="4.82177" vertical-offset="9949" max-vertical-offset="16020">
+                    <folding>
+                      <element signature="e#8621#8645#0" expanded="false" />
+                      <element signature="e#8682#8705#0" expanded="false" />
+                      <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+                      <element signature="e#13132#13152#0" expanded="false" />
+                      <element signature="e#13191#13509#0" expanded="false" />
+                      <element signature="e#13547#15287#0" expanded="false" />
+                      <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
+                      <element signature="n#!!block;n#getCookie#0" expanded="false" />
+                      <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+                      <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="webeC" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="javascript.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="748" column="46" selection-start="18245" selection-end="18245" vertical-scroll-proportion="0.5609284" vertical-offset="9850" max-vertical-offset="15510">
-              <folding>
-                <element signature="e#8497#8521#0" expanded="false" />
-                <element signature="e#8558#8581#0" expanded="false" />
-                <element signature="e#12667#12687#0" expanded="false" />
-                <element signature="e#12726#13044#0" expanded="false" />
-                <element signature="e#13082#14822#0" expanded="false" />
-                <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
-                <element signature="n#!!block;n#getCookie#0" expanded="false" />
-                <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-                <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-                <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="additem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/additem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="5" selection-start="3439" selection-end="3439" vertical-scroll-proportion="-29.583334" vertical-offset="2065" max-vertical-offset="2895">
+            <state line="41" column="42" selection-start="1597" selection-end="1597" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateitem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/updateitem.php">
+      <file leaf-file-name="help.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="3330">
+            <state line="51" column="0" selection-start="1943" selection-end="2251" vertical-scroll-proportion="-28.75" vertical-offset="75" max-vertical-offset="1005">
               <folding>
-                <element signature="e#7#46#0" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,60 +93,31 @@
       <file leaf-file-name="browser.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/browser.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5985">
+            <state line="118" column="10" selection-start="1483" selection-end="1489" vertical-scroll-proportion="-10.730769" vertical-offset="1491" max-vertical-offset="5970">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_icon_dark_high.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pictures/add_icon_dark_high.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="additem.html" pinned="false" current="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/additem.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="28" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.75" vertical-offset="0" max-vertical-offset="900">
+              <folding>
+                <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="31" selection-start="1960" selection-end="1960" vertical-scroll-proportion="-23.958334" vertical-offset="325" max-vertical-offset="1155">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deleteitem.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/deleteitem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="0" selection-start="2175" selection-end="2175" vertical-scroll-proportion="-29.583334" vertical-offset="1195" max-vertical-offset="2025">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getitems.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/getitems.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="25" selection-start="3291" selection-end="3291" vertical-scroll-proportion="-17.791666" vertical-offset="2288" max-vertical-offset="3060">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gettoken.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/gettoken.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="157" selection-end="157" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1965">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="additem.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/additem.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="35" selection-start="301" selection-end="301" vertical-scroll-proportion="-3.5" vertical-offset="36" max-vertical-offset="900">
-              <folding />
+            <state line="63" column="33" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-27.5" vertical-offset="285" max-vertical-offset="1170">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,22 +137,24 @@
       <list>
         <option value="$PROJECT_DIR$/api/dbconnection.php" />
         <option value="$PROJECT_DIR$/api/updateitem.php" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/additem.html" />
-        <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/api/additem.php" />
         <option value="$PROJECT_DIR$/api/deleteitem.php" />
         <option value="$PROJECT_DIR$/api/gettoken.php" />
-        <option value="$PROJECT_DIR$/javascript.js" />
         <option value="$PROJECT_DIR$/api/getitems.php" />
+        <option value="$PROJECT_DIR$/browser.css" />
+        <option value="$PROJECT_DIR$/javascript.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/help.html" />
+        <option value="$PROJECT_DIR$/additem.html" />
+        <option value="$PROJECT_DIR$/login.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="513" />
+    <option name="x" value="840" />
     <option name="y" value="22" />
-    <option name="width" value="1167" />
+    <option name="width" value="840" />
     <option name="height" value="974" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -250,6 +242,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -300,16 +293,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="513" y="22" width="1167" height="974" extended-state="0" />
+    <frame x="840" y="22" width="840" height="974" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19194517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26666668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -351,22 +344,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="700" column="12" selection-start="17677" selection-end="17677" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11490">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -382,7 +376,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="19" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3330">
           <folding>
-            <element signature="e#7#46#0" expanded="true" />
+            <element signature="e#7#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -390,7 +384,10 @@
     <entry file="file://$PROJECT_DIR$/additem.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="4" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="900">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -419,22 +416,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="799" column="33" selection-start="20025" selection-end="20025" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10515">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -443,7 +441,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="19" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3330">
           <folding>
-            <element signature="e#7#46#0" expanded="true" />
+            <element signature="e#7#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -451,7 +449,10 @@
     <entry file="file://$PROJECT_DIR$/additem.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="4" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="900">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -487,7 +488,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="216" column="0" selection-start="3959" selection-end="3959" vertical-scroll-proportion="0.0" vertical-offset="3240" max-vertical-offset="3330">
           <folding>
-            <element signature="e#7#46#0" expanded="true" />
+            <element signature="e#7#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -510,22 +511,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="626" column="22" selection-start="18393" selection-end="18393" vertical-scroll-proportion="0.0" vertical-offset="9295" max-vertical-offset="12525">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -557,22 +559,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="9" selection-start="866" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="12795">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -595,22 +598,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="9" selection-start="866" selection-end="871" vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="12795">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -622,35 +626,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pictures/searchicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pictures/add_icon_dark_high.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/additem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="301" selection-end="301" vertical-scroll-proportion="-3.5" vertical-offset="36" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/browser.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="5985">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="301" selection-end="301" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="885">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/additem.php">
@@ -671,7 +649,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="3330">
           <folding>
-            <element signature="e#7#46#0" expanded="true" />
+            <element signature="e#7#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="31" selection-start="1960" selection-end="1960" vertical-scroll-proportion="-23.958334" vertical-offset="325" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/getitems.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="183" column="25" selection-start="3291" selection-end="3291" vertical-scroll-proportion="-17.791666" vertical-offset="2288" max-vertical-offset="3060">
@@ -697,26 +668,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/browser.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="10" selection-start="1483" selection-end="1489" vertical-scroll-proportion="-10.730769" vertical-offset="1491" max-vertical-offset="5970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1943" selection-end="2251" vertical-scroll-proportion="-28.75" vertical-offset="75" max-vertical-offset="1005">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="33" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-27.5" vertical-offset="285" max-vertical-offset="1170">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="42" selection-start="1597" selection-end="1597" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/additem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="28" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.75" vertical-offset="0" max-vertical-offset="900">
+          <folding>
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="748" column="46" selection-start="18245" selection-end="18245" vertical-scroll-proportion="0.5609284" vertical-offset="9850" max-vertical-offset="15510">
+        <state line="1073" column="38" selection-start="24901" selection-end="24901" vertical-scroll-proportion="4.82177" vertical-offset="9949" max-vertical-offset="16020">
           <folding>
-            <element signature="e#8497#8521#0" expanded="false" />
-            <element signature="e#8558#8581#0" expanded="false" />
-            <element signature="e#12667#12687#0" expanded="false" />
-            <element signature="e#12726#13044#0" expanded="false" />
-            <element signature="e#13082#14822#0" expanded="false" />
+            <element signature="e#8621#8645#0" expanded="false" />
+            <element signature="e#8682#8705#0" expanded="false" />
+            <element signature="n#!!block;n#getHTMLOfContent#0;n#!!block;n#Container#0" expanded="false" />
+            <element signature="e#13132#13152#0" expanded="false" />
+            <element signature="e#13191#13509#0" expanded="false" />
+            <element signature="e#13547#15287#0" expanded="false" />
             <element signature="n#!!block;n#comeBack#0;n#!!block;n#Container#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
-            <marker date="1403436804000" expanded="true" signature="9279:9323" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="9556:9600" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10551:10559" placeholder="..." />
-            <marker date="1403436804000" expanded="false" signature="10634:10646" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="10831:10840" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11012:11020" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11238:11249" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11330:11349" placeholder="..." />
-            <marker date="1403436804000" expanded="true" signature="11966:11985" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9403:9447" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="9680:9724" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10675:10683" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10758:10770" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="10955:10964" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11136:11144" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11362:11373" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="11454:11473" placeholder="..." />
+            <marker date="1403459104000" expanded="true" signature="12090:12109" placeholder="..." />
           </folding>
         </state>
       </provider>

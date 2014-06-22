@@ -24,9 +24,9 @@ body {
 	padding-top: 1px;
 	position: fixed;
 	top: 0px;
-	background: #ffffff; //
-	border-bottom-style: solid; //
-	border-bottom-width: 1px; //
+	background: #ffffff;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 	border-bottom-color: #eeeeee;
 	z-index: 2;
 }
@@ -192,12 +192,11 @@ p {
 		to(#e6a100) );
 }
 
-.done { //
-	border-top-color: #eeeeee; //
+.done {
+	border-top-color: #eeeeee;
 	border-top-color: #505050;
 	background: #eeeeee;
-	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee),
-		to(#e8e8e8) );
+	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#e8e8e8));
 	color: #808080;
 }
 

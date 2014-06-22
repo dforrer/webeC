@@ -378,6 +378,16 @@ function Container(item_id, title, description, tags, creation_date, is_read, pr
 		return is_read;
 	}
 
+	this.setIsRead = function (zeroORone)
+	{
+		is_read = zeroORone;
+	}
+
+	this.getItemID = function ()
+	{
+		return item_id;
+	}
+
 	this.getPrio = function ()
 	{
 		return prio;
@@ -522,11 +532,32 @@ function Container(item_id, title, description, tags, creation_date, is_read, pr
 		content.innerHTML = getHTMLOfContent();
 	}
 
+	this.updateOnServer = function()
+	{
+		updateItem(item_id, title, prio, tags, description, creation_date, is_read);
+	}
 
 	this.update = function() {
 		divsuper.style.width = (160 + 160 + window.innerWidth) + 'px';
 		content.style.width = window.innerWidth + 'px';
 		content.innerHTML = getHTMLOfContent();
+	}
+
+	this.updateView = function()
+	{
+		if (is_read == 1)
+		{
+			state = 'done';
+			content.setAttribute('class', 'done');
+		}
+		else
+		{
+			state = 'undone';
+			content.setAttribute('class', alertLevel);
+		}
+
+		update();
+
 	}
 
 	this.clickHandler = function(event) {
@@ -746,9 +777,9 @@ function addNewItem()
 
 	obj.username = username;
 	obj.token	 = token;
-	obj.title 	 = title_new.replace(/"/g, '\"').replace(/'/g, '');
-	obj.prio 	 = prio_new.replace(/"/g, '\"').replace(/'/g, '');
-	obj.tags	 = tags_new.replace(/"/g, '\"').replace(/'/g, '');
+	obj.title 	 = title_new;
+	obj.prio 	 = prio_new;
+	obj.tags	 = tags_new.replace(/"/g, '').replace(/'/g, '');
 	obj.description   = description_new;
 	obj.creation_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
@@ -775,6 +806,7 @@ function addNewItem()
 
 		getitems();
 	};
+	console.log(jsonString);
 	xhr.send(jsonString);
 }
 
@@ -905,13 +937,7 @@ function getitems()
 		}
 		else
 		{
-			// Clear items-Array from previous items
-			//---------------------------------------
-			var alerts = document.getElementById('alerts');
-			while (alerts.firstChild)
-			{
-				alerts.removeChild(alerts.firstChild);
-			}
+			removeAllItems();
 			items.clear;
 
 			// Iterate through response
@@ -942,6 +968,17 @@ function getitems()
 	xhr.send(jsonString);
 }
 
+/**
+ * Clear items-Array from previous items
+ */
+function removeAllItems()
+{
+	var alerts = document.getElementById('alerts');
+	while (alerts.firstChild)
+	{
+		alerts.removeChild(alerts.firstChild);
+	}
+}
 
 function checkCookie() 
 {
@@ -951,7 +988,7 @@ function checkCookie()
     if ( token != "") 
     {
 		// TODO: Load new items
-		alert("Logged in as: " + username);
+		//alert("Logged in as: " + username);
 		getitems();
     }
     else
@@ -989,24 +1026,81 @@ function getCookie(cname)
     return "";
 }
 
+/**
+ * Unused
+ * @param cmd
+ */
 function handleCommand (cmd)
 {
-	var cmdArray = cmd.split(" ");
-	switch(cmdArray[0])
+	//var cmdArray = cmd.split(" ");
+	cmd = cmd.toLowerCase().trim();
+	switch(cmd)
 	{
-		case "Login":
-			alert("Login command: " + cmdArray.length);
+		case "login":
+			var timestamp = new Date();
+			addSlider('login.html?timestamp=' + timestamp.getTime());
+
 			break;
-		case "Logout":
-			alert("Logout");
+		case "logout":
+			//alert("Logged out");
 			username = null;
 			token = null;
 			delete_cookie("username");
 			delete_cookie("token");
+
+			setTimeout(function() {
+				var timestamp = new Date();
+				addSlider('login.html?timestamp=' + timestamp.getTime());
+			}, 300);
+
+			removeAllItems();
+
+			break;
+		case "clear":
+			if (confirm('Are you sure you want to delete all items?'))
+			{
+				for ( i = 0; i < items.length; i++)
+				{
+					deleteItem(items[i].getItemID());
+				}
+			} else {
+				// Do nothing!
+			}
+			break;
+
+		case "unread all":
+			for ( i = 0; i < items.length; i++)
+			{
+				items[i].setIsRead(0);
+				items[i].updateOnServer();
+				items[i].updateView();
+			}
+			updateAlertsHeight(items);
+			reorderAlerts(items, 400);
+
+			break;
+		case "read all":
+			for ( i = 0; i < items.length; i++)
+			{
+				items[i].setIsRead(1);
+				items[i].updateOnServer();
+				items[i].updateView();
+			}
+			updateAlertsHeight(items);
+			reorderAlerts(items, 400);
+			break;
+		case "help":
+			setTimeout(function() {
+				var timestamp = new Date();
+				addSlider('help.html?timestamp=' + timestamp.getTime());
+			}, 300);
+
 			break;
 		default:
 			alert("Unknown command");
-	}	
+	}
+	document.getElementById('topinput').blur();
+	document.getElementById('topinput').value = '';
 }
 
 function init() 
