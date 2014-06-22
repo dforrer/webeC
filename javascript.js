@@ -53,6 +53,16 @@ function openLink(theLink)
 	window.location.href = theLink.href;
 }
 
+/**
+ * Pad number with leading zeros to size
+ */
+function pad(num, size)
+{
+	var s = num+"";
+	while (s.length < size) s = "0" + s;
+	return s;
+}
+
 // FORRER: not used at the moment
 function smoothScrollToTop()
 {
@@ -469,7 +479,7 @@ function Container(item_id, title, description, tags, creation_date, is_read, pr
 		}
 		table += "</td>";
 		table += "<td style='width:1%'><p class='dates'>";
-		table += creation_date.getDate() + '.' + (creation_date.getMonth() + 1) + '.' + (creation_date.getFullYear()-2000);
+		table += creation_date.getDate() + '.' + pad((creation_date.getMonth() + 1),2) + '.' + (creation_date.getFullYear()-2000);
 		table += "</p></td>";
 		table += "</tr>";
 		table += "<tr><td style='height:10px'></td></tr>";
@@ -498,7 +508,7 @@ function Container(item_id, title, description, tags, creation_date, is_read, pr
 		table += "</td>";
 		table += "<td style='vertical-align: top'>";
 		table += "<p class='dates'><b>";
-		table += (creation_date.getHours() + (creation_date.getTimezoneOffset()/60)*(-1)) + ':' + creation_date.getMinutes();
+		table += (creation_date.getHours() + (creation_date.getTimezoneOffset()/60)*(-1)) + ':' + pad(creation_date.getMinutes(),2);
 		table += "</b></p>";
 		table += "</td>";
 		table += "</tr>";
@@ -736,9 +746,9 @@ function addNewItem()
 
 	obj.username = username;
 	obj.token	 = token;
-	obj.title 	 = title_new;
-	obj.prio 	 = prio_new;
-	obj.tags	 = tags_new;
+	obj.title 	 = title_new.replace(/"/g, '\"').replace(/'/g, '');
+	obj.prio 	 = prio_new.replace(/"/g, '\"').replace(/'/g, '');
+	obj.tags	 = tags_new.replace(/"/g, '\"').replace(/'/g, '');
 	obj.description   = description_new;
 	obj.creation_date = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
@@ -962,7 +972,10 @@ function setCookie(cname, cvalue, exdays)
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-
+function delete_cookie(cname)
+{
+	document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
 
 function getCookie(cname) 
 {
@@ -986,6 +999,10 @@ function handleCommand (cmd)
 			break;
 		case "Logout":
 			alert("Logout");
+			username = null;
+			token = null;
+			delete_cookie("username");
+			delete_cookie("token");
 			break;
 		default:
 			alert("Unknown command");
@@ -1006,29 +1023,21 @@ function init()
 	//-------------
 	checkCookie();
 
-/*
-	// Elemente initialisieren
-	var item1 = new Container(1, 'Einkaufen Heute', 'high', '<p><i>Biologie</i> - Fällmittelpumpe 3 ist ausgefallen. Hier steht mal etwas richtig langes! Ein halber Roman steht hier.</p>', 'Einkaufen Geschenke', '12.05.13', '19:56', false, null, 'undone', 'high', 'detail1.html');
 
-	var item2 = new Container(2, 'webeC lernen', 'medium', '<p>Ich muss noch webeC lernen.</p>', 'Todo FHNW', '08.04.13', '22:39', false, null, 'undone', 'medium', 'detail1.html');
-
-	var item3 = new Container(3, 'Grobrechen', 'high', '<p><i>Grobrechen 1</i> - Der Grobrechen ist blockiert.</p>', null, '10.05.13', '10:15', true, 'rechen_anleitungen.html', 'undone', 'high', 'detail1.html');
-
-	var item4 = new Container(4, 'Frischschlamm', 'medium', '<p><i>Frischschlammbecken</i> - Füllstand: <b>20.2 m<sup>3</sup>', 'quittiert durch M. Muster', '07.05.13', '6:45', false, null, 'undone', 'medium', 'detail1.html');
-
-	var item5 = new Container(5, 'Feinrechen', 'low', '<p><i>Gebäude 2</i> - Der Feinrechen ist blockiert.</p>', 'quittiert durch M. Muster', '30.04.13', '12:45', true, 'rechen_anleitungen.html', 'undone', 'low', 'detail1.html');
-
-	var item6 = new Container(6, 'Gasdepot', 'high', '<p><i>Gasdepot 1</i> - Das Depot ist zu 80% voll.</p>', 'quittiert durch M. Muster', '05.04.13', '12:20', false, null, 'undone', 'high', 'detail1.html');
-
-	// Adding Items to the array
-
-	items[0] = item1;
-	items[1] = item2;
-	items[2] = item3;
-	items[3] = item4;
-	items[4] = item5;
-	items[5] = item6;
-*/
+	// Register ID "topinput" for ENTER keys
+	//---------------------------------------
+	var topinput = document.getElementById('topinput');
+	topinput.onkeypress = function(e)
+	{
+		if (!e) e = window.event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13')
+		{
+			// Enter pressed
+			handleCommand(topinput.value);
+			return false;
+		}
+	}
 
 	// FORRER: Add Listener for Orientation change
 	window.addEventListener('orientationchange', function() {
