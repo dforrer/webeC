@@ -125,15 +125,3 @@ mysqli_close($con);
 
 exit;
 
-/*
-while ($row = mysqli_fetch_array($result)) {
-	echo "{";
-	echo "<td>" . $row['FirstName'] . "</td>";
-	echo "<td>" . $row['LastName'] . "</td>";
-	echo "<td>" . $row['Age'] . "</td>";
-	echo "<td>" . $row['Hometown'] . "</td>";
-	echo "<td>" . $row['Job'] . "</td>";
-	echo "</tr>";
-}
-*/
-

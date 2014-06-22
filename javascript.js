@@ -91,8 +91,9 @@ function debug(tmp, arg)
 
 function reorderAlerts(itemArray, speed)
 {
-	itemArray.sort(compareAlertlevel);
-	itemArray.sort(compareState);
+	itemArray.sort(compareDate);
+	itemArray.sort(comparePrio);
+	itemArray.sort(compareIsRead);
 	var offset = 0;
 	for ( i = 0; i < itemArray.length; i++)
 	{
@@ -114,51 +115,41 @@ function updateAlertsHeight(itemArray)
 }
 
 // Custom sort-function for Array.sort(compare);
-function compareDate(a, b) {
-	if (a.getState() == 'undone' && b.getState() == 'done') {
+function compareDate(a, b)
+{
+	if (a.getCreationDate() > b.getCreationDate())
+	{
 		return -1;
-	}
-	if (a.getState() == 'done' && b.getState() == 'undone') {
-		return 1;
 	}
 
 	return 0;
 }
 
+
 // Custom sort-function for Array.sort(compare);
-function compareState(a, b) {
-	if (a.getState() == 'undone' && b.getState() == 'done') {
+function compareIsRead(a, b)
+{
+	if (a.getIsRead() < b.getIsRead())
+	{
+		// a soll vor b erscheinen im Array
 		return -1;
-	}
-	if (a.getState() == 'done' && b.getState() == 'undone') {
-		return 1;
 	}
 
 	return 0;
 }
 
+
 // Custom sort-function for Array.sort(compare);
-function compareAlertlevel(a, b) {
-	if (a.getAlertlevel() == 'high' && b.getAlertlevel() == 'medium') {
-		return -1;
-	}
-	if (a.getAlertlevel() == 'medium' && b.getAlertlevel() == 'low') {
-		return -1;
-	}
-	if (a.getAlertlevel() == 'high' && b.getAlertlevel() == 'low') {
+function comparePrio(a, b)
+{
+	if (a.getPrio() > b.getPrio())
+	{
 		return -1;
 	}
 
-	if (a.getAlertlevel() == 'medium' && b.getAlertlevel() == 'high') {
-		return 1;
-	}
-	if (a.getAlertlevel() == 'low' && b.getAlertlevel() == 'medium') {
-		return 1;
-	}
-	if (a.getAlertlevel() == 'low' && b.getAlertlevel() == 'high') {
-		return 1;
-	}
+	return 0;
 }
+
 
 function updateView() {
 	for ( i = 0; i < items.length; i++) {
@@ -367,12 +358,26 @@ function Container(item_id, title, description, tags, creation_date, is_read, pr
 	var timerCounter = 0;
 	var timer = 0;
 
-	this.getDiv = function() {
+	this.getDiv = function()
+	{
 		return content;
 	}
-	this.getState = function() {
-		return state;
+
+	this.getIsRead = function ()
+	{
+		return is_read;
 	}
+
+	this.getPrio = function ()
+	{
+		return prio;
+	}
+
+	this.getCreationDate = function ()
+	{
+		return creation_date;
+	}
+
 	this.getAlertlevel = function() {
 		return alertLevel;
 	}
@@ -710,6 +715,7 @@ function getToken()
 			token = data.resp.token;
 			setCookie("username", obj.username,100);
 			setCookie("token", data.resp.token,100);
+			getitems();
 		}
 	};
 	xhr.send(jsonString);
