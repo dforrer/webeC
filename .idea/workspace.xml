@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anleitung_allgemein.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anleitung_allgemein2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anleitung_spezifisch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/menu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/anleitungen_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/anleitungen_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/arrow_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/arrow_white_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/becken_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/becken_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/chemie_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/chemie_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/einstellungen_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/einstellungen_white_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/feinrechen_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/feinrechen_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/filter_dark_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/filter_white_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/filter_white_high_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/filter_white_high_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/filter_white_high_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/fragezeichen_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/fragezeichen_white_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/home_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/key_white_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/menuicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/menuicon_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/pumpe_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/refresh_dark_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/settings_dark_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/usericon_dark_high.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/usericon_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/usericon_white_high.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/additem.html" afterPath="$PROJECT_DIR$/additem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/additem.php" afterPath="$PROJECT_DIR$/api/additem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/deleteitem.php" afterPath="$PROJECT_DIR$/api/deleteitem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/gettoken.php" afterPath="$PROJECT_DIR$/api/gettoken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.js" afterPath="$PROJECT_DIR$/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="14d29f60-09c0-45da-80d0-cb09ef04682f" name="Default" comment="" />
     <ignored path="webeC.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,7 +26,7 @@
       <file leaf-file-name="javascript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="32" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.24564797" vertical-offset="848" max-vertical-offset="12435">
+            <state line="94" column="4" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.1876209" vertical-offset="878" max-vertical-offset="12435">
               <folding>
                 <element signature="n#!!block;n#smoothScrollToTop#0" expanded="false" />
                 <element signature="n#!!block;n#debug#0" expanded="false" />
@@ -82,15 +40,15 @@
                 <element signature="n#!!block;n#setCookie#0" expanded="false" />
                 <element signature="n#!!block;n#getCookie#0" expanded="false" />
                 <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-                <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-                <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-                <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+                <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+                <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -408,15 +366,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -481,15 +439,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -577,15 +535,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -629,15 +587,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -672,15 +630,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -769,7 +727,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="32" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.24564797" vertical-offset="848" max-vertical-offset="12435">
+        <state line="94" column="4" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.1876209" vertical-offset="878" max-vertical-offset="12435">
           <folding>
             <element signature="n#!!block;n#smoothScrollToTop#0" expanded="false" />
             <element signature="n#!!block;n#debug#0" expanded="false" />
@@ -783,15 +741,15 @@
             <element signature="n#!!block;n#setCookie#0" expanded="false" />
             <element signature="n#!!block;n#getCookie#0" expanded="false" />
             <element signature="n#!!block;n#handleCommand#0" expanded="false" />
-            <marker date="1403432703000" expanded="true" signature="9135:9179" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="9412:9456" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10407:10415" placeholder="..." />
-            <marker date="1403432703000" expanded="false" signature="10490:10502" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10687:10696" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="10868:10876" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11087:11098" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11179:11198" placeholder="..." />
-            <marker date="1403432703000" expanded="true" signature="11815:11834" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9135:9179" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="9412:9456" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10407:10415" placeholder="..." />
+            <marker date="1403434240000" expanded="false" signature="10490:10502" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10687:10696" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="10868:10876" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11087:11098" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11179:11198" placeholder="..." />
+            <marker date="1403434240000" expanded="true" signature="11815:11834" placeholder="..." />
           </folding>
         </state>
       </provider>
